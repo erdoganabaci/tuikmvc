@@ -1,0 +1,154 @@
+﻿@model Tuik
+
+
+<div class="row">
+    <div class="col-md-3">
+        @* @Html.Partial("_menu") *@
+        @await Component.InvokeAsync("CategoryMenu")
+    </div>
+    <div class="col-md-9">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row no-gutter">
+
+                    <div class="container">
+
+                        <h5 class="card-title">
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">  @Model.Name</a>
+                        </h5>
+                       
+                        <p class="card-text">
+                            <table id="example" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                       
+                                            @Html.Raw(Model.TableColumnName)
+   
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        @if ( Model.Description == "")
+                                        {
+                                            <div class="alert alert-danger" role="alert">
+                                                No Data Found!
+                                            </div>
+                                        }
+                                        @Html.Raw(Model.Description)
+                                   
+               
+
+                                </tbody>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+        $('#example').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        });
+    });
+</script>
+
+
+
+<!-- <div class="row">
+    <div class="col-md-3">
+        @* @Html.Partial("_menu") *@
+        @await Component.InvokeAsync("CategoryMenu")
+    </div>
+    <div class="col-md-9">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row no-gutter">
+                    <div class="col-md-4">
+                        <img src="~/img/@Model.ImageUrl" alt="@Model.Description" class="card-img">
+                    </div>
+                    <div class="col-md-8">
+
+                        <h5 class="card-title">
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">  @Model.Name</a>
+                        </h5>
+                        <p class="card-text">
+                            @Html.Raw(Model.Description)
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -- >
+
+
+    <div class="row">
+    <div class="col-md-3">
+        @* @Html.Partial("_menu")
+        @await Component.InvokeAsync("CategoryMenu")  *@
+    </div>
+    <div class="col-md-9">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row no-gutter">
+
+                    <div class="container">
+
+                        <h5 class="card-title">
+                           @* <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">  @Model.Name</a>
+                        </h5>
+                        <p class="card-text">
+                            @Html.Raw(Model.Description)*@
+                        </p>
+                        <p class="card-text">
+                            <table id="example" class="display" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Office</th>
+                                        <th>Age</th>
+                                        <th>Start date</th>
+                                        <th>Salary</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+
+                                </tbody>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
