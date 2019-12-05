@@ -1,6 +1,6 @@
 # tuikmvc
 
-This project about getting from Turkish Statistical Institute data and show datatable by using mvc .net core 2.2
+This project about getting from **Turkish Statistical Institute** data and show datatable by using mvc .net core 2.2
 Especially I extract user requirement transformed system requirements and ı draw use case to define project easily.
 
 Mainly we are going to determine the user requirements for an tuik database and we will try to convert them into system requirements. In order to determine them accurately, we are going to use software engineering techniques in our project, such as User Scenarios and UML diagrams.
